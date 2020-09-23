@@ -5,43 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".ClaimActivity">
+    tools:context=".StatementActivity">
     <TextView
-        android:id="@+id/tx1"
+        android:id="@+id/sb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Available Statements are:"
+        android:text="Submit your statement here:"
         android:textSize="25sp"
         android:layout_marginTop="30dp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"/>
-    <ListView
+    <EditText
+        android:id="@+id/enterClaim"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:id="@+id/list_wait"
-        android:layout_below="@+id/tx1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb"
+        android:ems="14"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"
+        android:layout_below="@+id/enterClaim"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/stGame"
-        android:text="START GAME"
-        android:textColor="@color/red"
-        android:background="@drawable/rounded_button"
-        android:layout_below="@+id/list_wait"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="END GAME"
-        android:id="@+id/endGame"
-        android:textColor="@color/red"
-        android:background="@drawable/rounded_button"
-        android:layout_below="@+id/stGame"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="SUBMIT"/>
 
 
 </RelativeLayout>

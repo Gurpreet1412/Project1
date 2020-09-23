@@ -15,35 +15,21 @@ class WaitActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wait)
-        //Claims list
+        //Rooms list
         val arrayAdapter1: ArrayAdapter<*>
-        val claim = arrayOf("Statement1", "Statement2", "Statement3")
+        val room = arrayOf("Room1", "Poom2", "Room3")
 
         // access the listView from xml file
-        var cListView = findViewById<ListView>(R.id.listClaim)
-        arrayAdapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, claim)
+        var cListView = findViewById<ListView>(R.id.WaitList)
+        arrayAdapter1 = ArrayAdapter(this, android.R.layout.simple_list_item_1, room)
         cListView.adapter = arrayAdapter1
 
-        listClaim.setOnItemClickListener { parent, view, position, id ->
+        WaitList.setOnItemClickListener { parent, view, position, id ->
             val element = parent.getItemAtPosition(position) // The item that was clicked
             val intent = Intent(this, ClaimActivity::class.java)
             startActivity(intent)
         }
 
-        //Start Game
-        stGame.setOnClickListener{
-            startActivity(Intent(this, ClaimActivity::class.java))
-        }
-
-        //End Game
-        endGame.setOnClickListener{
-            AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id -> super@WaitActivity.onBackPressed() })
-                .setNegativeButton("No", null)
-                .show()
-        }
 
     }
 }
