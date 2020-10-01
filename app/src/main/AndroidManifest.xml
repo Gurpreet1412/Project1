@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".StatementActivity"></activity>
+        <activity android:name=".EditRipActivity"></activity>
+        <activity android:name=".BoutAdminViewActivity" />
+        <activity android:name=".BoutPlayerViewActivity" />
+        <activity android:name=".FinalTallyPlayerViewActivity" />
+        <activity android:name=".InitialTallyAdminViewActivity" />
+        <activity android:name=".InitialTallyPlayerViewActivity" />
+        <activity android:name=".StatementActivity" />
         <activity android:name=".WaitActivity" />
         <activity android:name=".ClaimActivity" />
         <activity android:name=".GameActivity" />
